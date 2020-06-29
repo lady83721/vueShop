@@ -20,6 +20,9 @@ Server.interceptors.request.use(function(config){
 
 // 响应拦截器
 Server.interceptors.response.use(function(response){
+    if(response.status == 200){
+        return response.data
+    }
     return response
 },function(error){
     return Promise.reject(error)

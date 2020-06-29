@@ -8,6 +8,12 @@ import axios from './utils/request.js';
 import storage from './utils/storage.js';
 Vue.prototype.$axios = axios
 
+// 引入vant组件
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
+Vue.use(Vant);
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

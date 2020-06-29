@@ -10,6 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect:"/shop/user",
       name: 'HelloWorld',
       component: HelloWorld
     },
