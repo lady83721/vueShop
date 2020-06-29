@@ -84,12 +84,19 @@
 </template>
 
 <script>
+import storage from "@/utils/storage"
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted(){
+    let string = "hello";
+    storage.set("test",string)
+    console.log(storage.get("test"))
+    storage.remove("test")
   }
 }
 </script>
