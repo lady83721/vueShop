@@ -5,6 +5,7 @@
       <van-field class="inp" placeholder="用户" right-icon="user-o" />
       <!-- 输入手机号，调起手机号键盘 -->
       <van-field class="inp" placeholder="手机号" right-icon="graphic" />
+      <van-field class="inp" placeholder="手机号" right-icon="graphic" />
 
       <van-button type="info" block class="btn">立即登陆</van-button>
     </div>

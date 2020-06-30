@@ -50,6 +50,7 @@
             <van-button plain size="small" :disabled="btnDis" @click="sendCode">{{ msg }}</van-button>
           </template>
         </van-field>
+        <!-- 组件 -->
         <van-button type="info" block class="btn" @click="checkForm">立即注册</van-button>
       </van-form>
     </div>
