@@ -52,13 +52,13 @@
         </van-field>
         <!-- 组件 -->
         <van-button type="info" block class="btn" @click="checkForm">立即注册</van-button>
+        <p id="a"><router-link to="/shop/deng">已有账号?点击登陆···</router-link></p>
       </van-form>
     </div>
   </div>
 </template>
 
 <script>
-import "../../assets/style/reset.css";
 import areaList from "@/utils/area";
 export default {
   data() {
@@ -87,6 +87,7 @@ export default {
   },
 
   mounted() {
+    // document.title = "严选商城-注册"
     this.createImg();
   },
   methods: {
@@ -187,9 +188,7 @@ export default {
           return false;
         } 
         this.$toast.fail("注册成功");
-        this.$router.push({
-          path: "/shop/deng"
-        });
+       
       });
     }
   },
@@ -198,27 +197,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-#login {
-  margin: 0.2rem 0.3rem;
-  font-size: 0.2rem;
-  border: 1px solid #dfdfdf;
-}
-// p {
-//   line-height: 0.3rem;
-//   text-align: center;
-// }
-.inp {
-  border: 1px solid #dfdfdf;
-  border-radius: 0.15rem;
-  width: 95%;
-  margin: 0.2rem auto;
-}
-.btn {
-  width: 95%;
-  margin: 0.2rem auto;
-  background: red;
-  border: none;
-  box-shadow: 1px 2px #dfd0d0;
-  background: linear-gradient(rgb(187, 240, 135), rgb(115, 225, 241));
-}
+
 </style>

@@ -1,0 +1,30 @@
+#login {
+  margin: 0.2rem 0.3rem;
+  font-size: 0.2rem;
+  border: 1px solid #dfdfdf;
+}
+
+.inp {
+  border: 1px solid #dfdfdf;
+  border-radius: 0.15rem;
+  width: 95%;
+  margin: 0.2rem auto;
+}
+
+.btn {
+  width: 95%;
+  margin: 0.2rem auto;
+  background: red;
+  border: none;
+  box-shadow: 1px 2px #dfd0d0;
+  background: linear-gradient(#bbf087, #73e1f1);
+}
+
+#a {
+  width: 100%;
+  line-height: .4rem;
+  margin: 10px auto;
+  text-align: center;
+  font-size: .3rem;
+  color: #369090;
+}
