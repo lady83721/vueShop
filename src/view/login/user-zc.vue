@@ -73,15 +73,15 @@ export default {
       hide: true, //密码显示
       hides: true, //确认密码显示
 
-      imgUrl: "",  //图形验证码图片地址
-      picKey: "",  //图片值
+      imgUrl: "", //图形验证码图片地址
+      picKey: "", //图片值
 
-      cityShow: false,  //城市选项出现
-      areaList: areaList,  //获取城市
-      city: "",   //城市
+      cityShow: false, //城市选项出现
+      areaList: areaList, //获取城市
+      city: "", //城市
       province: "", //省份
       msg: "发送验证码",
-      btnDis: false  //发送验证码按钮
+      btnDis: false //发送验证码按钮
     };
   },
 
@@ -91,7 +91,14 @@ export default {
   methods: {
     checkForm() {
       //   验证表单信息不为空
-      if (this.user == "" || this.password == "") {
+      if (
+        this.user == "" ||
+        this.password == "" ||
+        this.passw == "" ||
+        this.picCode == "" ||
+        this.city == "" ||
+        this.code == ""
+      ) {
         this.$toast.fail("信息不能为空");
         return false;
       }
@@ -105,34 +112,16 @@ export default {
       if (this.passw != this.password) {
         this.$toast.fail("密码不一致");
       }
-
-       this.$axios({
-        url: "https://api.it120.cc/small4/user/m/register",
-        params: {
-          mobile: this.tel,
-          pwd:this.password,
-          code:this.code,
-          nick:this.user,
-          province:this.province,
-          city:this.city
-        }
-      }).then(res => {
-        console.log(res);
-        this.$toast.fail("注册成功");
-        this.$router.push({
-            path:"/shop/deng"
-        })
-        // if (res.code != 0) {
-        //   this.$toast.fail();
-        //   return false;
-        // }
-      });
+      this.submitReg()
     },
+    mounted() {},
     //   生成图形验证码
     createImg() {
       this.picKey = new Date().getTime();
+      console.log(this.picKey);
       let apiUrl = "https://api.it120.cc/small4/verification/pic/get";
       this.imgUrl = `${apiUrl}?key=${this.picKey}`;
+      // console.log(apiUrl)
     },
     seleCity(arr) {
       this.cityShow = false;
@@ -140,7 +129,7 @@ export default {
         return item.name;
       });
       console.log(a);
-    //   this.province = a[0];
+      //   this.province = a[0];
       // this.province = a[0]
       // this.province = a[0]
       this.city = a.join(" ");
@@ -176,7 +165,31 @@ export default {
           return false;
         }
       });
-      this.countSeconds()
+      this.countSeconds();
+    },
+
+    submitReg() {
+      this.$axios({
+        url: "https://api.it120.cc/small4/user/m/register",
+        params: {
+          mobile: this.tel,
+          pwd: this.password,
+          code: this.code,
+          nick: this.user,
+          province: this.province,
+          city: this.city
+        }
+      }).then(res => {
+        console.log(res);
+        if (res.code != 0) {
+          this.$toast.fail(res.msg);
+          return false;
+        } 
+        this.$toast.fail("注册成功");
+        this.$router.push({
+          path: "/shop/deng"
+        });
+      });
     }
   },
   components: {},
@@ -195,14 +208,16 @@ export default {
 // }
 .inp {
   border: 1px solid #dfdfdf;
-  border-radius: 0.2rem;
+  border-radius: 0.15rem;
   width: 95%;
   margin: 0.2rem auto;
 }
 .btn {
-  width: 90%;
-  margin: .2rem auto;
+  width: 95%;
+  margin: 0.2rem auto;
   background: red;
   border: none;
+  box-shadow: 1px 2px #dfd0d0;
+  background: linear-gradient(rgb(187, 240, 135), rgb(115, 225, 241));
 }
 </style>
