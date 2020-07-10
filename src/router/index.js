@@ -9,7 +9,7 @@ import shop from "./shop"
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/home',
       // redirect:"/shop/user",
       name: 'HelloWorld',
       component: HelloWorld

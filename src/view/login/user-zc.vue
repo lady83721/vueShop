@@ -148,7 +148,7 @@ export default {
         }
         this.msg = ` 倒计时${timeout}s `;
         timeout--;
-      }, 1000);
+      }, 100);
     },
 
     // 发送验证码

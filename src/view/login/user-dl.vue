@@ -13,7 +13,7 @@
           v-model="pwd"
           class="inp"
         ></van-field>
-        <van-button type="info" block class="btn" @click="checkLogin">立即登陆</van-button>
+        <van-button type="info" block class="btn" @click="checkLogin"> 立即登陆</van-button>
         <p id="a">
           <router-link to="/shop/user">没有账号?点击注册···</router-link>
         </p>
@@ -59,6 +59,7 @@ export default {
         return false;
       }
       this.login();
+
     },
     login() {
       this.$axios({
