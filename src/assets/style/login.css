@@ -74,7 +74,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  line-height: 0.5rem;
+  line-height: 0.6rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -146,5 +146,70 @@ body {
 }
 
 .cut dl dd .price span p {
+  line-height: .5rem;
+}
+
+img {
+  width: 100%;
+  height: 6rem;
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+}
+
+h4 {
+  width: 100%;
+  line-height: 0.8rem;
+  background: #fff;
+  text-align: center;
+}
+
+.swips {
+  background: #fff;
+  width: 100%;
+  height: 4.6rem;
+}
+
+.swips p {
+  width: 80%;
+  font-size: 0.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 0.3rem;
+}
+
+.swips img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.2rem;
+}
+
+.shop {
+  width: 100%;
+  background: #fcfafa;
+  /* height: 4rem; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.shop li {
+  width: 46%;
+  height: 4.2rem;
+  margin: .1rem 0;
+  background: #fff;
+}
+
+.shop li img {
+  width: 100%;
+  height: 80%;
+}
+
+.shop li p {
   line-height: .5rem;
 }

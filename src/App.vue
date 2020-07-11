@@ -1,25 +1,7 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <div class="boxs">
-      <router-view />
-    </div>
-
-    <ul class="ul">
-      <li
-        v-for="(item,index) in $store.state.arr"
-        :key="index"
-        @click="activeIndex==index"
-        :style="{color:activeIndex==index?'red':''}"
-      >
-        <router-link :to="item.path">
-          <p>
-            <van-icon :name="item.name" size=".5rem" />
-          </p>
-          <p>{{ item.title }}</p>
-        </router-link>
-      </li>
-    </ul>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -28,13 +10,15 @@ export default {
   name: "App",
   data() {
     return {
-      activeIndex: 0
+ 
     };
   },
   mounted() {
-    // this.activeIndex = this.$store.state.activeIndex
+
   },
-  methods: {}
+  methods: {
+   
+  }
 };
 </script>
 

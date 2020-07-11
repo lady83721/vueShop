@@ -15,6 +15,7 @@ import 'vant/lib/index.css';
 
 Vue.use(Vant);
 
+
 Vue.config.productionTip = false
 
 // 全局路由守卫 (hasOwnProperty【只判断自身属性】   或  in 判断数据类型)
