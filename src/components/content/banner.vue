@@ -28,12 +28,12 @@
           <p>砍价</p>
         </router-link>
 
-        <li>
+        <router-link to="/special" tag="li">
           <p>
             <van-icon name="comment" size=".6rem" color="red" />
           </p>
           <p>专栏</p>
-        </li>
+        </router-link>
       </ul>
     </div>
   </div>
@@ -46,8 +46,11 @@ export default {
   },
   props: ["swipeList", "arrs"],
 
-  mounted() {},
-  methods: {},
+  mounted() {
+  },
+  methods: {
+   
+  },
   components: {},
   computed: {}
 };

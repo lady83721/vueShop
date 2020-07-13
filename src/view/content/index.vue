@@ -7,7 +7,7 @@
       <cut :cutList="cutList"></cut>
     </div>
     <div>
-      <h4>精选专题→ →</h4>
+      <h4 @click="goodList">精选专题→ →</h4>
       <!-- 精选轮播 -->
       <good :newList="newList"></good>
     </div>
@@ -52,6 +52,11 @@ export default {
         this.$router.push({
           path:"/cuts"
         })
+    },
+    goodList(){
+      this.$router.push({
+        path:"/good"
+      })
     },
     swipeAjax() {
       this.$axios({
@@ -118,5 +123,9 @@ export default {
 <style scoped>
 .l{
   margin-top: .2rem;
+}
+img {
+  width: 100%;
+  height: 6rem;
 }
 </style>

@@ -1,23 +1,22 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
+    <load v-show="$store.state.loading"></load>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Load from "@/components/load/loading"
 export default {
   name: "App",
   data() {
-    return {
- 
-    };
+    return {};
   },
-  mounted() {
-
-  },
-  methods: {
-   
+  mounted() {},
+  methods: {},
+  components:{
+     Load
   }
 };
 </script>

@@ -1,11 +1,17 @@
 <template>
   <div>
     <ul class="shop">
-      <li v-for="(item) in shopList" :key="item.id">
+      <router-link
+        :to="'/shopping/'+item.id"
+        tag="li"
+        v-for="(item) in shopList"
+        :key="item.id"
+        @click="shop(item)"
+      >
         <img :src="item.pic" alt />
         <p>{{ item.name }}</p>
         <p v-html="'￥'+item.minPrice"></p>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -15,7 +21,7 @@ export default {
   data() {
     return {};
   },
-  props:["shopList"],
+  props: ["shopList"],
 
   mounted() {},
   methods: {},

@@ -4,6 +4,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state:{
+        loading:false,
         activeIndex:0,
         arr:[
             {id:0,name:"smile-o",path:"/",title:"首页",img:"https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2841247860,2911841437&fm=26&gp=0.jpg"},
@@ -13,7 +14,9 @@ const store = new Vuex.Store({
         ]
     },
     mutations:{
-       
+       setLoading(state,bool){
+           state.loading = bool
+       }
     },
     actions:{},
     getters:{},
