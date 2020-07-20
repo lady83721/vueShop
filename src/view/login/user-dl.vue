@@ -81,6 +81,7 @@ export default {
         user.account = this.mobile;
         storage.set("user", user,true);
         this.$toast.fail("登陆成功");
+        this.$router.go(-1)
       });
     }
   },

@@ -12,7 +12,12 @@ import search from "@/components/click/search"
 import special from "@/components/click/special"
 import shopping from "@/components/shop/shopping"
 import smallspecial from "@/components/click/small-special"
-// 定义变量
+import order from "@/components/order/orderConfirm"
+import orders from "@/components/order/orderS"
+
+import Lazy from "@/components/lazy/lazy"
+import water from "@/components/lazy/water"
+// 定义变量/
 const shop = [{
     path: '/shop/user',
     name: "user",
@@ -78,11 +83,43 @@ const shop = [{
     }
   },
   {
+    path: '/order',
+    name: "order",
+    component: order,
+    meta: {
+      title: "严选商城-订单"
+    }
+  },
+  {
     path: '/shopping/:id',
     name: "shopping",
     component: shopping,
     meta: {
       title: "严选商城-购物车"
+    }
+  },
+  {
+    path: '/orders',
+    name: "orders",
+    component: orders,
+    meta: {
+      title: "严选商城-确认付款"
+    }
+  },
+  {
+    path: '/lazy',
+    name: "Lazy",
+    component: Lazy,
+    meta: {
+      title: "严选商城-图片懒加载"
+    }
+  },
+  {
+    path: '/water',
+    name: "water",
+    component: water,
+    meta: {
+      title: "严选商城-瀑布流"
     }
   },
 
@@ -104,7 +141,7 @@ const shop = [{
         name: "index2",
         component: index2,
         meta: {
-          title: "严选商城-首页"
+          title: "严选商城-分类"
         }
       },
       {
@@ -112,7 +149,7 @@ const shop = [{
         name: "index3",
         component: index3,
         meta: {
-          title: "严选商城-首页"
+          title: "严选商城-购物车"
         }
       },
       {
