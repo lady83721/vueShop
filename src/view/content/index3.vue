@@ -11,7 +11,7 @@
       </van-card>
     </div>
 
-    <van-submit-bar :price="totalAmounts" button-text="提交订单" @submit="submitOrder">
+    <van-submit-bar class="nav" :price="totalAmounts" button-text="提交订单" @submit="submitOrder">
       <van-checkbox v-model="checked">全选</van-checkbox>
     </van-submit-bar>
 
@@ -88,5 +88,9 @@ export default {
 }
 .cart {
   flex: 1;
+}
+.nav{
+  width: 100%;
+  bottom: .9rem;
 }
 </style>
